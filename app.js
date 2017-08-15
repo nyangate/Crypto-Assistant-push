@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 var admin = require("firebase-admin");
-var cserviceAccount = require("./crypto-assistant-firebase-adminsdk.json");
+var cserviceAccount = require("./crypto-assistant.json");
 var bodyparser = require('body-parser');
 var morgan =require('morgan');
 var dateFormat = require('dateformat');
