@@ -70,7 +70,7 @@ function sendAlert(order,priceChange,increase,limit){
               console.log("Successfully sent message:", response);
               client.set(key,priceChange)
               // var expiryDate = new LocalDate().plusHours(1);
-              var expiryDate = moment().add(120, 'minutes').toDate();
+              var expiryDate = moment().add(300, 'minutes').toDate();
               console.log(expiryDate);
               client.expireat(key, parseInt(expiryDate/1000));
             })
