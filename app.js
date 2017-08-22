@@ -113,7 +113,7 @@ function fetchUpdates(){
       getUsers(JSON.parse(body).USD.buy);
 
     });
-  }, 60000);
+  }, 1800000);
 
 }
 
