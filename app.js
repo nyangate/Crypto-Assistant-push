@@ -89,10 +89,10 @@ function getUsers(priceChange){
   snapshot.forEach(function(data) {
     var greaterthan = JSON.parse(data.val()).greaterThan;
     var lessthan = JSON.parse(data.val()).lessThan;
-    if(priceChange>=greaterthan){
+    if(greaterthan>0 && priceChange>=greaterthan){
       sendAlert(JSON.parse(data.val()),priceChange,true,greaterthan);
     }
-    if(priceChange<lessthan){
+    if(lessthan>0 && priceChange<lessthan){
       sendAlert(JSON.parse(data.val()),priceChange,false,lessthan);
     }
   });
