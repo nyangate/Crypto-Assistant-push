@@ -85,7 +85,7 @@ function sendAlert(order,priceChange,increase,limit){
 
     }
 function getUsers(priceChange){
-  usersRef.orderByValue().on("value", function(snapshot) {
+  usersRef.orderByValue().once("value", function(snapshot) {
   snapshot.forEach(function(data) {
     var greaterthan = JSON.parse(data.val()).greaterThan;
     var lessthan = JSON.parse(data.val()).lessThan;
